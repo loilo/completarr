@@ -12,10 +12,6 @@ You may want to use this over yargs' [built-in solution](http://yargs.js.org/doc
 npm install --save completarr
 ```
 
-## Requirements
-* Works with globally installed commands only
-* The yargs app needs to expose its help via [`.help()`](http://yargs.js.org/docs/#api-help)
-
 ## Usage
 To use Completarr, perform the following rather simple steps:
 

@@ -1,6 +1,6 @@
 {
   "name": "completarr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zero config autocompletions for yargs apps (bash, zsh, fish)",
   "keywords": [
     "autocomplete",
