@@ -38,7 +38,7 @@ There are some things to consider:
 
 * Completarr is based on [omelette](https://github.com/f/omelette) and therefore does not support Windows. 😕
 * Completarr only works with globally installed commands.
-* Our yargs app needs to expose its help via [`.help()`](http://yargs.js.org/docs/#api-help) to make Completarr work.
+* Your yargs app needs to expose its help via [`.help()`](http://yargs.js.org/docs/#api-help) to make Completarr work.
 
 ### Configuration
 Completarr should work without any config 99% of the time, but there might be some edge cases in your app you want to handle:
@@ -47,7 +47,7 @@ Completarr should work without any config 99% of the time, but there might be so
 By default, Completarr adds completion for all commands it finds in your `package.json`'s `bin` field. If you got more commands there than you want completion for, you need to pass them to the install/uninstall hook explicitely:
 
 ```javascript
-// Your package.json
+// Your CLI app's package.json
 {
   // We got three binaries:
   "bin": {
