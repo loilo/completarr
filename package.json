@@ -1,0 +1,43 @@
+{
+  "name": "completarr",
+  "version": "0.1.0",
+  "description": "Zero config autocompletions for yargs apps (bash, zsh, fish)",
+  "keywords": [
+    "autocomplete",
+    "bash",
+    "complete",
+    "fish",
+    "omelette",
+    "yargs",
+    "zsh"
+  ],
+  "homepage": "https://github.com/Loilo/yargs-omelette-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/Loilo/yargs-omelette-bridge/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loilo/yargs-omelette-bridge.git"
+  },
+  "license": "MIT",
+  "author": "Florian Reuschel <florian@loilo.de>",
+  "files": [
+    "src"
+  ],
+  "main": "src/complete.js",
+  "bin": {
+    "install-yargs-completion": "./src/install",
+    "uninstall-yargs-completion": "./src/uninstall"
+  },
+  "scripts": {
+    "test": "standard"
+  },
+  "dependencies": {
+    "omelette": "^0.4.11",
+    "string-argv": "0.0.2",
+    "yargs-parser": "^10.1.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
+}
