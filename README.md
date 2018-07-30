@@ -15,14 +15,14 @@ npm install --save completarr
 ## Usage
 To use Completarr, perform the following rather simple steps:
 
-1. Integrate it into our CLI app:
+1. Integrate it into your CLI app:
 
    ```javascript
    require('completarr')()
 
    // Your yargs-related code
    ```
-2. Add install/uninstall hooks to our `package.json` to automatically attach the completion script the user's shell init file:
+2. Add install/uninstall hooks to your `package.json` to automatically attach the completion script the user's shell init file:
 
    ```json
    {
