@@ -53,7 +53,15 @@ module.exports = function completeYargs ({ name, helpOption = 'help' } = {}) {
 
   // Get the string blocks containing available commands/options...
   const [ , commandLines ] = helpOutput.match(/\nCommands:\n([\s\S]+?)\n(\n|$)/) || [ null, '' ]
-  const [ , optionLines ] = helpOutput.match(/\nOptions:\n([\s\S]+?)\n(\n|$)/) || [ null, '' ]
+
+  const optionRegEx = /^ {2}(--.+?|-[a-zA-Z0-9])[\s,$]/gm
+  const options = []
+  let hit
+  while ((hit = optionRegEx.exec(helpOutput))) {
+    if (!process.argv.includes(hit[1])) {
+      options.push(hit[1])
+    }
+  }
 
   // ...and parse them
   const commands = commandLines
@@ -61,13 +69,6 @@ module.exports = function completeYargs ({ name, helpOption = 'help' } = {}) {
     .map(line => line.match(/^ {2}.*?(\S+?)( {2}|$)/))
     .filter(match => match !== null)
     .map(match => match[1])
-
-  const options = optionLines
-    .split('\n')
-    .map(line => line.match(/^ {2}(--?\S+?)[\s,$]/))
-    .filter(match => match !== null)
-    .map(match => match[1])
-    .filter(option => !typedCommandParts.includes(option))
 
   // If the typed command already includes any --options,
   // don't offer any further commands.
