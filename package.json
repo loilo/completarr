@@ -11,13 +11,13 @@
     "yargs",
     "zsh"
   ],
-  "homepage": "https://github.com/Loilo/yargs-omelette-bridge#readme",
+  "homepage": "https://github.com/Loilo/completarr#readme",
   "bugs": {
-    "url": "https://github.com/Loilo/yargs-omelette-bridge/issues"
+    "url": "https://github.com/Loilo/completarr/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Loilo/yargs-omelette-bridge.git"
+    "url": "git+https://github.com/Loilo/completarr.git"
   },
   "license": "MIT",
   "author": "Florian Reuschel <florian@loilo.de>",
