@@ -34,10 +34,10 @@
   },
   "dependencies": {
     "omelette": "^0.4.11",
-    "string-argv": "0.0.2",
-    "yargs-parser": "^10.1.0"
+    "string-argv": "^0.3.0",
+    "yargs-parser": "^13.1.0"
   },
   "devDependencies": {
-    "standard": "^11.0.1"
+    "standard": "^12.0.1"
   }
 }
